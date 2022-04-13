@@ -14,6 +14,10 @@ const app = express();
 // Connect to toitoie Database
 connectDB();
 
+// Initialize Middlewares
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // Serve on Home Root
 app.get("/", (req, res) => {
   res.send("Toitoie Server is running and is ready to process requests...");
