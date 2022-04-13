@@ -2,19 +2,20 @@ const express = require("express");
 
 const router = express.Router();
 
+// Controllers
+const {
+  registerUser,
+  loginUser,
+  getAuthenticatedUser,
+} = require("../controllers/user.controllers");
+
 // Register User Route
-router.post("/", (req, res) => {
-  res.send("Register User Route Reached!");
-});
+router.post("/", registerUser);
 
 // Login User Route
-router.post("/login", (req, res) => {
-  res.send("Login User Route Reached!");
-});
+router.post("/login", loginUser);
 
 // Fetch Authenticated (Logged In) User
-router.get("/", (req, res) => {
-  res.send("Get Me Route Reached!");
-});
+router.get("/", getAuthenticatedUser);
 
 module.exports = router;
