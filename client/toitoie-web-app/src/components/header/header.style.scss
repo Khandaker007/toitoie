@@ -1,0 +1,50 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.header{
+    // background-color: aqua;
+    height: 13rem;
+    padding-inline: 8rem;
+    border-radius: 0px 0px 9rem 9rem;
+    box-shadow: .4rem 0 6.8rem -3.1rem rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo-container{
+        height: 8.5rem;
+        .logo{
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .list{
+        font-size: 2.5rem;
+        font-weight: 400;
+        display: flex;
+        gap: 10rem;
+        &__item{
+            list-style: none;
+            &--link{
+                text-decoration: none;
+                color: $color-primary;
+                // background-color: aqua;
+                &::after{
+                    content: '';
+                    height: .3rem;
+                    width: 0;
+                    display: block;
+                    background-color: $color-secondary;
+                    margin-top: -.5rem;
+                    transition: all .3s ease-in;
+                }
+                // border-bottom: .3rem solid $color-secondary;
+            }
+            &:hover .list__item--link::after{
+                width: 100%;
+            }
+        }
+    }
+}

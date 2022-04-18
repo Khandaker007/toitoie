@@ -37,6 +37,9 @@ $breakpoint arguments choice:
     @if $breakpoint == desktop { // media size 1280px
         @media (max-width: 80em) {@content};
     }
+    @if $breakpoint == m-desktop {
+        @media (max-width: 90em) {@content};
+    }
     @if $breakpoint == big-desktop {
         @media (min-width: 112.5em) {@content};
     }

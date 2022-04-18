@@ -1,16 +1,19 @@
+@import '../sass/variables.scss';
+@import '../sass/mixins.scss';
+
 // HEADING TAG
 %heading{
     font-weight: 400;
 }
 .heading-1{
-    @extend %heading;
-    font-size: 3rem;
-    line-height: 1;
+    font-size: 8rem;
+    font-weight: 600;
+    line-height: 12rem;
 }
 .heading-2{
     @extend %heading;
-    font-size: 2.5rem;
-    line-height: 1;
+    font-size: 7rem;
+    line-height: 10rem;
 }
 .heading-3{
     @extend %heading;
@@ -20,6 +23,28 @@
 .heading-4{
     @extend %heading;
     font-size: 1.5rem;
+}
+
+// peragraph
+p{
+    @extend %heading;
+    font-family: 'Poppins';
+    font-size: 2rem;
+    line-height: 1.6;
+    color: $color-secondary;
+}
+
+// color class
+.clr-gradient{
+    background: -webkit-linear-gradient(#409BD6, #105594);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.clr-primary{
+    color: $color-primary;
+}
+.clr-secondary{
+    color: $color-secondary;
 }
 
 // PADDING
