@@ -1,0 +1,23 @@
+@import './sass/mixins.scss';
+@import './sass/typography.scss';
+@import './sass/variables.scss';
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    background: $color-white;
+}
