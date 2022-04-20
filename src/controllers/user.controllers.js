@@ -23,7 +23,7 @@ const registerUser = asyncHandler(async (req, res) => {
   const userWithEmail = await User.findOne({ email });
   if (userWithEmail) {
     res.status(400);
-    throw new Erorr("Email is already taken!");
+    throw new Error("Email is already taken!");
   }
 
   // Hash Password
