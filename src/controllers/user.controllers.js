@@ -109,9 +109,9 @@ const loginUser = asyncHandler(async (req, res) => {
 // @desc    Fetch Authenticated (Logged In) User
 // @route   GET api/user/
 // @access  Private
-const getAuthenticatedUser = (req, res) => {
-  res.send("Get Me Route Reached!");
-};
+const getAuthenticatedUser = asyncHandler(async (req, res) => {
+  res.status(200).json(req.user);
+});
 
 module.exports = {
   registerUser,
