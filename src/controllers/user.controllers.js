@@ -8,7 +8,7 @@ const User = require("../models/user.model");
 const generateJWT = require("../utils/generateJWT.util");
 
 // @desc    Register User
-// @route   POST api/user/
+// @route   POST api/user
 // @access  Public
 const registerUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
@@ -107,7 +107,7 @@ const loginUser = asyncHandler(async (req, res) => {
 });
 
 // @desc    Fetch Authenticated (Logged In) User
-// @route   GET api/user/
+// @route   GET api/user
 // @access  Private
 const getAuthenticatedUser = asyncHandler(async (req, res) => {
   res.status(200).json(req.user);

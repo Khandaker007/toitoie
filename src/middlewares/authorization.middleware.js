@@ -31,13 +31,13 @@ const protectRoute = asyncHandler(async (req, res, next) => {
       res.status(401);
       throw new Error("Authorization DENIED!");
     }
+  }
 
-    if (!token) {
-      console.log("Authorization DENIED. NO TOKEN FOUND".brightRed.underline);
+  if (!token) {
+    console.log("Authorization DENIED. NO TOKEN FOUND".brightRed.underline);
 
-      res.status(401);
-      throw new Error("Auth Token NOT Found!");
-    }
+    res.status(401);
+    throw new Error("Auth Token NOT Found!");
   }
 });
 
