@@ -37,7 +37,9 @@ const registerUser = asyncHandler(async (req, res) => {
   });
 
   if (user) {
-    console.log(`User Registered. Email: ${user.email}`.brightGreen.underline);
+    console.log(
+      `User Registered SUCCESSFULLY. Email: ${user.email}`.brightGreen.underline
+    );
 
     res.status(201).json({
       id: user.id,
@@ -46,19 +48,63 @@ const registerUser = asyncHandler(async (req, res) => {
     });
   } else {
     console.log(
-      `User could NOT be Registered. Email: ${email}`.brightRed.underline
+      `User Registration FAILED. Email: ${email}`.brightRed.underline
     );
+
     res.status(400);
-    throw new Error("SERVER ERROR: User Registration NOT Successful!");
+    throw new Error("SERVER ERROR: User Registration FAILED!");
   }
 });
 
 // @desc    Login User
 // @route   POST api/user/login
 // @access  Public
-const loginUser = (req, res) => {
-  res.send("Login User Route Reached!");
-};
+const loginUser = asyncHandler(async (req, res) => {
+  const { email, password } = req.body;
+
+  // Check for Required Fields
+  if (!email || !password) {
+    res.status(400);
+    throw new Error("Please add all required fields!");
+  }
+
+  // Check if User Exists
+  const user = await User.findOne({ email });
+
+  // Verify Password & Authenticate
+  if (user) {
+    const isPasswordVerified = await bcrypt.compare(password, user.password);
+
+    if (isPasswordVerified) {
+      console.log(
+        `User Authenticated SUCCESSFULLY. Email: ${user.email}`.brightGreen
+          .underline
+      );
+
+      res.status(201).json({
+        id: user.id,
+        email: user.email,
+        token: generateJWT(user.id),
+      });
+    } else {
+      console.log(
+        `User Authentication FAILED. INCORRECT PASSWORD. Email: ${email}`
+          .brightRed.underline
+      );
+
+      res.status(400);
+      throw new Error("Invalid Credentials!");
+    }
+  } else {
+    console.log(
+      `User Authentication FAILED. NO USER FOUND. Email: ${email}`.brightRed
+        .underline
+    );
+
+    res.status(400);
+    throw new Error("Invalid Credentials!");
+  }
+});
 
 // @desc    Fetch Authenticated (Logged In) User
 // @route   GET api/user/
