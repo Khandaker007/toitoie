@@ -1,12 +1,16 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const colors = require("colors");
+const logTime = require("log-timestamp");
 
 // Configs
 const connectDB = require("./src/configs/db.config");
 
 // Routes
 const userRoutes = require("./src/routes/user.routes");
+
+// Middlewares
+const errorHandler = require("./src/middlewares/errorHandler.middleware");
 
 // Initialize App
 const app = express();
@@ -25,6 +29,9 @@ app.get("/", (req, res) => {
 
 // toitoie Server Routes
 app.use("/api/user", userRoutes);
+
+// Error Handler Middleware
+app.use(errorHandler);
 
 // PORT
 const PORT = process.env.PORT || 5000;
