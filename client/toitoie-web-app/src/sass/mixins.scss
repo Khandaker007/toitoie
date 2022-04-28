@@ -44,3 +44,9 @@ $breakpoint arguments choice:
         @media (min-width: 112.5em) {@content};
     }
 }
+
+@mixin shrinkLabel{
+    top: -2rem;
+    font-size: 1.2rem;
+    color: black;
+}

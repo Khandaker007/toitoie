@@ -1,0 +1,43 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.package-card{
+
+    &__image-container{
+        height: 20rem;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        margin-bottom: 1rem;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__title{
+        font-size: 2rem;
+        color: $color-secondary;
+        margin-bottom: 1rem;
+    }
+    &__review-container{
+        margin-bottom: 1rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--star{
+            img{
+                height: 2.5rem;
+            }
+        }
+    }
+    &__price-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

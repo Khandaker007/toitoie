@@ -1,0 +1,21 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.slider-card{
+    height: 50rem;
+    position: relative;
+    padding: 1rem;
+    &__name{
+        font-size: 4rem;
+        color: $color-white;
+
+        position: absolute;
+        left: 2rem;
+    }
+    &__image{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

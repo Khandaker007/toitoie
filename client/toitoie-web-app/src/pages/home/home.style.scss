@@ -24,7 +24,11 @@
             }
             .btn-container{
                 padding: 5rem 20rem;
+                width: max-content;
 
+                .btn-link{
+                    text-decoration: none;
+                }
             }
         }
         &--container-right{
@@ -51,6 +55,49 @@
                     object-fit: contain;
                 }
             }
+        }
+    }
+    &__offer{
+        padding: 10rem;
+        text-align: center;
+
+        &--heading{
+            white-space: nowrap;
+            color: $color-primary;
+        }
+        &--card-container{
+            display: flex;
+            justify-content: center;
+            gap: 6rem;
+        }
+    }
+    &__packages{
+        display: grid;
+        grid-template-columns: [sm-col-start] 40% [sm-col-end lg-col-start] 60% [lg-col-end];
+        // grid-gap: 5rem;
+
+        &--container-text{
+            grid-column: sm-col-start / sm-col-end;
+
+            text-align: end;
+            padding-right: 7rem;
+            h1{
+                margin-bottom: 7rem;
+                .heading-part-1,
+                .heading-part-2{
+                    display: block;
+                }
+                .heading-part-1{
+                    color: $color-primary;
+                }
+                .heading-part-2{
+                    color: $color-secondary;
+                }
+            }
+        }
+        &--container-slider{
+            grid-column: lg-col-start / lg-col-end;
+
         }
     }
 }

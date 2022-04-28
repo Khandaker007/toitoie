@@ -1,0 +1,62 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.card{
+    height: 50rem;
+    width: 39rem;
+    box-shadow: 0px .4rem 3.4rem .2rem rgba(0, 0, 0, 0.25);
+    border-radius: 1.2rem;
+    
+    position: relative;
+    &__mask{
+        background: $color-secondary-gradient;
+        opacity: 0.5;
+        border-radius: 1.2rem;
+        
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        
+        
+    }
+    &__number,
+    &__heading{
+        position: relative;
+    }
+    &__number{
+        color: $color-secondary-gradient;
+        text-align: start;
+        // padding-top: 2rem;
+        padding-left: 2rem;
+    }
+    &__heading{
+        color: $color-white;
+        position: absolute !important;
+        top: 4rem;
+        z-index: 1;
+        text-align: start;
+        font-size: 5rem !important;
+        line-height: 7.4rem !important;
+        font-weight: 700;
+        padding-left: 3rem;
+    }
+    .img-container{
+        height: 100%;
+        width: 100%;
+        
+        display: flex;
+        align-items: flex-end;
+        
+        position: absolute;
+        bottom: 0;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        // background-color: palegreen;
+    }
+    &__layout{
+        width: 100%;
+        object-fit: contain;
+
+    }
+}

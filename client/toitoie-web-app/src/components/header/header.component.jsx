@@ -26,6 +26,7 @@ export default function Header() {
                 <Link to='' className='list__item--link'>About Us</Link>
             </li>
         </ul>
+        <Link to='/sign-in-sign-up' className='login-btn'>Login</Link>
     </div>
   )
 }

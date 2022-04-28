@@ -1,0 +1,35 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.package-slider{
+    .slick-slide{
+        // padding-inline: 1rem;
+    }
+    .slick-arrow{
+        color: black;
+        height: 100%;
+        width: 6rem;
+    }
+    .slick-next{
+        background: linear-gradient(to left, white 30%, transparent);
+        right: 0rem;
+    }
+    .slick-prev{
+        background: linear-gradient(to right, white 30%, transparent);
+        left: 0rem;
+        z-index: 1111;
+    }
+    .slick-prev:hover, 
+    .slick-prev:focus{
+        background: linear-gradient(to right, white 30%, transparent);
+    } 
+    .slick-next:hover,
+    .slick-next:focus{
+        background: linear-gradient(to left, white 30%, transparent);        
+    }
+    .slick-prev:before,
+    .slick-next:before{
+        color: $color-secondary;
+    }
+}

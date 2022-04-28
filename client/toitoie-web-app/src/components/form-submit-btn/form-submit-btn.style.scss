@@ -1,0 +1,24 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.form-btn{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    background-color: $color-secondary;
+    color: #fff;
+    padding: 1rem 4rem;
+    border: 1px solid $color-secondary;
+
+    transition: all .2s;
+
+    &:hover{
+        cursor: pointer;
+
+        background-color: #fff;
+        color: $color-secondary;
+        border: 1px solid $color-secondary;
+    }
+
+}

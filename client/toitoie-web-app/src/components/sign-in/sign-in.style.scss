@@ -1,0 +1,59 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.sign-in{
+    padding: 4rem;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+
+
+    &__heading{
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: $color-secondary;
+        margin-bottom: 4rem;
+        display: block;
+        position: relative;
+        text-align: center;
+
+        &::before{
+            content: '';
+            height: 1px;
+            width: 50%;
+            background-color: $color-primary;
+            position: absolute;
+            top: 100%;
+            margin-left: 20%;
+        }
+
+
+    }
+
+    .create-account-link{
+        font-size: 1.3rem;
+        white-space: nowrap;
+        color: black;
+        width: 30%;
+        
+
+        &:hover{
+            color: blue;
+        }
+    }
+
+    .form-group{
+
+        &:not(:first-child){
+            margin-bottom: 1rem;
+        }
+    }
+
+    .btn-group{
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-gap: 2rem;
+    }
+}

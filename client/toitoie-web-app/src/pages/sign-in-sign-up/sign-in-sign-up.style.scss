@@ -1,0 +1,21 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.sign-in-sign-up{
+    // padding-inline: 30rem;
+    padding-top: 10rem;
+    justify-content: center;
+
+    display: flex;
+    gap: 20rem;
+    .sign-in-container{
+        height: 50rem;
+        background-color: aqua;
+    }
+    .sign-up-container{
+        height: 50rem;
+        background-color: aquamarine;
+
+    }
+}
