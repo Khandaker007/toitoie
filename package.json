@@ -28,11 +28,17 @@
     "colors": "^1.4.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
+<<<<<<< HEAD
     "mongoose": "^6.2.9",
     "react-redux": "^8.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
+=======
+    "log-timestamp": "^0.3.0",
+    "mongoose": "^6.2.9"
+>>>>>>> master
   },
   "devDependencies": {
     "concurrently": "^7.1.0",
