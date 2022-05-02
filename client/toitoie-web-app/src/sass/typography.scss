@@ -1,0 +1,76 @@
+@import '../sass/variables.scss';
+@import '../sass/mixins.scss';
+
+// HEADING TAG
+%heading{
+    font-weight: 400;
+}
+.heading-1{
+    font-size: 8rem;
+    font-weight: 600;
+    line-height: 12rem;
+}
+.heading-2{
+    @extend %heading;
+    font-size: 7rem;
+    line-height: 10rem;
+}
+.heading-3{
+    @extend %heading;
+    font-size: 2rem;
+    line-height: 1
+}
+.heading-4{
+    @extend %heading;
+    font-size: 1.5rem;
+}
+
+// peragraph
+p{
+    @extend %heading;
+    font-family: 'Poppins';
+    font-size: 2rem;
+    line-height: 1.6;
+    color: $color-secondary;
+}
+
+// color class
+.clr-gradient{
+    background: -webkit-linear-gradient(#409BD6, #105594);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.clr-primary{
+    color: $color-primary;
+}
+.clr-secondary{
+    color: $color-secondary;
+}
+
+// PADDING
+.pb-1{
+    padding-bottom: 1rem;
+}
+.pb-2{
+    padding-bottom: 2rem;
+}
+.pb-3{
+    padding-bottom: 3rem;
+}
+.pb-4{
+    padding-bottom: 4rem;
+}
+
+// MARGIN
+.mb-1{
+    margin-bottom: 1rem;
+}
+.mb-2{
+    margin-bottom: 2rem;
+}
+.mb-3{
+    margin-bottom: 3rem;
+}
+.mb-4{
+    margin-bottom: 4rem;
+}

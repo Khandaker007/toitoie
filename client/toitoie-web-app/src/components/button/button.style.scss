@@ -1,0 +1,24 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/typography.scss';
+@import '../../sass/variables.scss';
+
+.btn{
+    padding: 1rem 3rem;
+    box-shadow: 0 .4rem 1.7rem -.6rem rgba(0, 0, 0, 0.25);
+    border-radius: 4.7rem;
+    border: none;
+    font-size: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    img{
+        height: 2.2rem;
+    }
+}
+
+.btn-white{
+    background: $color-white;
+    color: $color-primary;
+}
