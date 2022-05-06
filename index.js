@@ -8,6 +8,8 @@ const connectDB = require("./src/configs/db.config");
 
 // Routes
 const userRoutes = require("./src/routes/user.routes");
+const packageRoutes = require("./src/routes/package.routes");
+const placeRoutes = require("./src/routes/place.routes");
 
 // Middlewares
 const errorHandler = require("./src/middlewares/errorHandler.middleware");
@@ -29,6 +31,8 @@ app.get("/", (req, res) => {
 
 // toitoie Server Routes
 app.use("/api/user", userRoutes);
+app.use("/api/package", packageRoutes);
+app.use("/api/place", placeRoutes);
 
 // Error Handler Middleware
 app.use(errorHandler);
