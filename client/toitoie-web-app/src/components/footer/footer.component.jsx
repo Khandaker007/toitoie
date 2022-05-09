@@ -43,7 +43,6 @@ export default function Footer() {
         <h1>Contact</h1>
         <span>info@toitoie.com</span>
         <span>+88 01999037483</span>
-
         <div className="social-media"></div>
       </div>
     </div>
