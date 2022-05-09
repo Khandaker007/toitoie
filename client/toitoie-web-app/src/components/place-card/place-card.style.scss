@@ -1,0 +1,31 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/typography.scss";
+@import "../../sass/variables.scss";
+
+.place-card {
+  &__image-container {
+    height: 20rem;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    margin-bottom: 1rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    font-size: 2rem;
+    color: $color-secondary;
+    margin-bottom: 1rem;
+  }
+  &__description {
+    height: 8rem;
+    overflow: hidden;
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}

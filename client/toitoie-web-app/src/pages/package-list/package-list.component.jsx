@@ -1,27 +1,31 @@
-import React from 'react'
+import React from "react";
 
 // COMPONENT
-import PackageCard from '../../components/package-card/package-card.component'
+import PackageCard from "../../components/package-card/package-card.component";
 
 // DATA
-import packagesListData from './data'
+import packagesListData from "./data";
 
-import './package-list.style.scss'
+import "./package-list.style.scss";
 
-export default function Package({collectPackageId}) {
+export default function Package({ collectPackageId }) {
+  // api end point
   return (
-    <div className='package-page'>
+    <div className="package-page">
       <div className="search-container">
-        <h1 className='search-container__heading'>search tour</h1>
-        <input className='search-container__search-field' type="search" placeholder='Destination'/>
+        <h1 className="search-container__heading">search package</h1>
+        <input
+          className="search-container__search-field"
+          type="search"
+          placeholder="Destination"
+        />
       </div>
+      {/* package list */}
       <div className="package-list-container">
-        {
-          packagesListData.map(data => (
-            <PackageCard collectId={collectPackageId} key={data.id} data={data}/>
-          ))
-        }
+        {packagesListData.map((data) => (
+          <PackageCard collectId={collectPackageId} key={data.id} data={data} />
+        ))}
       </div>
     </div>
-  )
+  );
 }

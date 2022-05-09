@@ -1,0 +1,41 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/typography.scss";
+@import "../../sass/variables.scss";
+
+.place-page {
+  margin-inline: 10rem;
+  margin-top: 6rem;
+
+  display: grid;
+  grid-template-columns: [col-sm-start] 25% [col-sm-end col-lg-start] 70% [col-lg-end];
+  justify-content: space-between;
+  // grid-gap: 5rem;
+  .search-container {
+    grid-column: col-sm-start / col-sm-end;
+    // margin: 4rem;
+    height: 50rem;
+    background-color: #c1dee9;
+    padding: 2rem;
+
+    &__heading {
+      color: $color-secondary;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+    }
+
+    &__search-field {
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+      border: none;
+      border-radius: 10rem;
+    }
+  }
+  .package-list-container {
+    grid-column: col-lg-start / col-lg-end;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 5rem 3rem;
+  }
+}

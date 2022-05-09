@@ -1,0 +1,149 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/typography.scss";
+@import "../../sass/variables.scss";
+
+.package-single {
+  padding-inline: 10rem;
+  padding-top: 5rem;
+
+  display: grid;
+  grid-template-columns: [col-lg-start] 70% [col-lg-end col-sm-start] 30% [col-sm-end];
+
+  .package-info {
+    grid-column: col-lg-start / col-lg-end;
+
+    h1 {
+      font-size: 3.5rem;
+      color: $color-secondary;
+    }
+    h3 {
+      font-size: 3rem;
+      color: $color-secondary;
+      margin-bottom: 2rem;
+    }
+    .image-container {
+      height: 50rem;
+      margin-block: 3rem;
+      background-color: palevioletred;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .overview-container {
+      margin-bottom: 3rem;
+    }
+    .highlights-container {
+      &__list {
+        font-size: 2rem;
+        color: $color-secondary;
+        margin-left: 5rem;
+      }
+      &__item {
+      }
+    }
+  }
+  .booking-container {
+    grid-column: col-sm-start / col-sm-end;
+    // position: relative;
+    .booking-box {
+      position: sticky;
+      top: 0;
+      margin-inline: 4rem;
+
+      &__date,
+      &__clients {
+        border-bottom: 1px solid rgb(196, 196, 196);
+      }
+
+      &__date,
+      &__clients,
+      &__btn-container {
+        border-inline: 1px solid rgb(196, 196, 196);
+      }
+
+      &__price,
+      &__date,
+      &__clients,
+      &__btn-container {
+        padding: 3rem 2rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          font-size: 2rem;
+          font-weight: 700;
+          color: $color-secondary;
+        }
+      }
+
+      &__price {
+        background-color: $color-secondary;
+        h3 {
+          font-size: 2.5rem;
+          color: $color-white;
+        }
+      }
+      &__date {
+        input[type="date"] {
+          font-size: 2rem;
+          padding: 1rem 2rem;
+          cursor: pointer;
+        }
+      }
+      &__clients {
+        .box {
+          display: flex;
+          flex-direction: column;
+
+          .age-range {
+            font-weight: 300 !important;
+          }
+        }
+        .increment {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          button {
+            font-size: 4rem;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            transition: all 0.3s;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+              background-color: $color-secondary-light;
+            }
+          }
+          span {
+            font-size: 2.5rem;
+          }
+        }
+      }
+      &__btn-container {
+        border-bottom: 2rem solid $color-secondary;
+        button {
+          padding: 1.5rem 2rem;
+          font-size: 2rem;
+          color: $color-white;
+          background-color: $color-secondary;
+          border: none;
+          text-transform: uppercase;
+          width: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
