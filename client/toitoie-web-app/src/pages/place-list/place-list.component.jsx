@@ -4,11 +4,11 @@ import React from "react";
 import PlaceCard from "../../components/place-card/place-card.component";
 
 // DATA
-import placeListData from "./data";
+// import placeListData from "./data";
 
 import "./place-list.style.scss";
 
-export default function Place() {
+export default function Place({ collectPlaceId, placesData }) {
   return (
     <div className="place-page">
       <div className="search-container">
@@ -20,8 +20,12 @@ export default function Place() {
         />
       </div>
       <div className="package-list-container">
-        {placeListData.map((data) => (
-          <PlaceCard key={data.id} data={data} />
+        {placesData.map((data) => (
+          <PlaceCard
+            collectPlaceId={collectPlaceId}
+            key={data.id}
+            data={data}
+          />
         ))}
       </div>
     </div>

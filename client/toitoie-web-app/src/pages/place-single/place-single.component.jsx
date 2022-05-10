@@ -13,7 +13,7 @@ import packagesListData from "./data";
 // CSS
 import "./place-single.style.scss";
 
-const PlaceSingle = () => {
+const PlaceSingle = ({ placeId }) => {
   return (
     <div className="place-single">
       <div className="img-container">
@@ -21,6 +21,7 @@ const PlaceSingle = () => {
       </div>
       <div className="content">
         <h1 className="heading-2 title">Sylhet</h1>
+        <p>{placeId}</p>
         <p>
           Tanguar haor is a unique wetland ecosystem of national importance as
           it offers a combined view of submerged forest view, river view, and

@@ -11,15 +11,21 @@ import SignInAndSignUp from "./pages/sign-in-sign-up/sign-in-sign-up.component";
 import PackageSingle from "./pages/package-single/package-single.component";
 import PlaceSingle from "./pages/place-single/place-single.component";
 
-import data from "./pages/package-list/data";
+import pkgData from "./pages/package-list/data";
+import placesData from "./pages/place-list/data";
 
 import "./App.scss";
 
 function App() {
   const [packageId, setPackageId] = useState("");
+  const [placeId, setPlaceId] = useState("");
 
   const collectPackageId = (id) => {
     setPackageId(id);
+  };
+
+  const collectPlaceId = (id) => {
+    setPlaceId(id);
   };
 
   return (
@@ -30,10 +36,21 @@ function App() {
         <Route
           path="/package-list"
           element={
-            <PackageList collectPackageId={collectPackageId} pkgData={data} />
+            <PackageList
+              collectPackageId={collectPackageId}
+              pkgData={pkgData}
+            />
           }
         />
-        <Route path="/place-list" element={<PlaceList />} />
+        <Route
+          path="/place-list"
+          element={
+            <PlaceList
+              collectPlaceId={collectPlaceId}
+              placesData={placesData}
+            />
+          }
+        />
         <Route path="/sign-in-sign-up" element={<SignInAndSignUp />} />
         <Route
           path="/package-single"
@@ -41,7 +58,7 @@ function App() {
         />
         <Route
           path="/place-single"
-          element={<PlaceSingle packageId={packageId} />}
+          element={<PlaceSingle placeId={placeId} />}
         />
       </Routes>
       <Footer />
