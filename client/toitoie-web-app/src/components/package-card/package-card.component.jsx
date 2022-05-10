@@ -1,13 +1,22 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 // ICON
 import starIcon from "../../assets/icons/star-icon.png";
 
 import "./package-card.style.scss";
 
-export default function PackageCard({ data }) {
+export default function PackageCard({ data, collectPackageId }) {
+  let navigate = useNavigate();
+
+  const clickHandler = () => {
+    collectPackageId(data.id);
+    navigate("/package-single");
+  };
+
   return (
-    <div className="package-card">
+    <div className="package-card" onClick={clickHandler}>
       <div className="package-card__image-container">
         <img src={data.image} alt="package image" />
       </div>
