@@ -1,0 +1,45 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/typography.scss";
+@import "../../sass/variables.scss";
+
+.place-single {
+  padding-inline: 10rem;
+
+  .img-container {
+    height: 50rem;
+    margin-block: 10rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .content {
+    margin-bottom: 5rem;
+    h1 {
+      font-weight: 700;
+      color: $color-primary;
+      margin-bottom: 2rem;
+    }
+  }
+  .related-package {
+    h2 {
+      color: $color-secondary;
+    }
+    .card-container {
+      padding: 5rem 0;
+      display: grid;
+      grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+      grid-template-rows: repeat(2, max-content);
+      grid-gap: 3.5rem;
+
+      .btn-container {
+        grid-column: col-start 1 / col-end 4;
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+      }
+    }
+  }
+}
