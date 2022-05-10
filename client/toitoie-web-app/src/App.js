@@ -9,6 +9,7 @@ import PackageList from "./pages/package-list/package-list.component";
 import PlaceList from "./pages/place-list/place-list.component";
 import SignInAndSignUp from "./pages/sign-in-sign-up/sign-in-sign-up.component";
 import PackageSingle from "./pages/package-single/package-single.component";
+import PlaceSingle from "./pages/place-single/place-single.component";
 
 import "./App.scss";
 
@@ -33,6 +34,10 @@ function App() {
         <Route
           path="/package-single"
           element={<PackageSingle packageId={packageId} />}
+        />
+        <Route
+          path="/place-single"
+          element={<PlaceSingle packageId={packageId} />}
         />
       </Routes>
       <Footer />
