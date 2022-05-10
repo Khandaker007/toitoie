@@ -10,6 +10,8 @@ import PlaceList from "./pages/place-list/place-list.component";
 import SignInAndSignUp from "./pages/sign-in-sign-up/sign-in-sign-up.component";
 import PackageSingle from "./pages/package-single/package-single.component";
 
+import data from "./pages/package-list/data";
+
 import "./App.scss";
 
 function App() {
@@ -26,7 +28,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route
           path="/package-list"
-          element={<PackageList collectPackageId={collectPackageId} />}
+          element={
+            <PackageList collectPackageId={collectPackageId} pkgData={data} />
+          }
         />
         <Route path="/place-list" element={<PlaceList />} />
         <Route path="/sign-in-sign-up" element={<SignInAndSignUp />} />

@@ -12,6 +12,7 @@ export default function PackageSingle({ packageId }) {
     <div className="package-single">
       <div className="package-info">
         <h1>Tanguar TOITOIe – The most luxurious house boat at Tanguar haor</h1>
+        <p>{packageId}</p>
         <div className="image-container">
           <img src={packageImage} alt="package image" />
         </div>

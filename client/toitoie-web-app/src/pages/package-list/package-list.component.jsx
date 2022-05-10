@@ -4,11 +4,11 @@ import React from "react";
 import PackageCard from "../../components/package-card/package-card.component";
 
 // DATA
-import packagesListData from "./data";
+// import packagesListData from "./data";
 
 import "./package-list.style.scss";
 
-export default function Package({ collectPackageId }) {
+export default function Package({ collectPackageId, pkgData }) {
   // api end point
   return (
     <div className="package-page">
@@ -22,8 +22,12 @@ export default function Package({ collectPackageId }) {
       </div>
       {/* package list */}
       <div className="package-list-container">
-        {packagesListData.map((data) => (
-          <PackageCard collectId={collectPackageId} key={data.id} data={data} />
+        {pkgData.map((data) => (
+          <PackageCard
+            collectPackageId={collectPackageId}
+            key={data.id}
+            data={data}
+          />
         ))}
       </div>
     </div>
