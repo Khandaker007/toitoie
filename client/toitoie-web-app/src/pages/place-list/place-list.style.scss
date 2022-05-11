@@ -3,8 +3,7 @@
 @import "../../sass/variables.scss";
 
 .place-page {
-  margin-inline: 10rem;
-  margin-top: 6rem;
+  margin: 5rem 10rem;
 
   display: grid;
   grid-template-columns: [col-sm-start] 25% [col-sm-end col-lg-start] 70% [col-lg-end];

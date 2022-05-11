@@ -1,61 +1,81 @@
-@import '../../sass/mixins.scss';
-@import '../../sass/typography.scss';
-@import '../../sass/variables.scss';
+@import "../../sass/mixins.scss";
+@import "../../sass/typography.scss";
+@import "../../sass/variables.scss";
 
-.header{
-    // background-color: aqua;
-    height: 13rem;
-    padding-inline: 8rem;
-    border-radius: 0px 0px 9rem 9rem;
-    box-shadow: .4rem 0 6.8rem -3.1rem rgba(0, 0, 0, 0.25);
+.header {
+  // background-color: aqua;
+  height: 13rem;
+  padding-inline: 8rem;
+  border-radius: 0px 0px 9rem 9rem;
+  box-shadow: 0.4rem 0 6.8rem -3.1rem rgba(0, 0, 0, 0.25);
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo-container {
+    height: 8.5rem;
+    .logo {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .list {
+    font-size: 2.5rem;
+    font-weight: 400;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .logo-container{
-        height: 8.5rem;
-        .logo{
-            height: 100%;
-            object-fit: contain;
-        }
-    }
-    .list{
-        font-size: 2.5rem;
-        font-weight: 400;
-        display: flex;
-        gap: 10rem;
-        &__item{
-            list-style: none;
-            &--link{
-                text-decoration: none;
-                color: $color-primary;
-                // background-color: aqua;
-                &::after{
-                    content: '';
-                    height: .3rem;
-                    width: 0;
-                    display: block;
-                    background-color: $color-secondary;
-                    margin-top: -.5rem;
-                    transition: all .3s ease-in;
-                }
-                // border-bottom: .3rem solid $color-secondary;
-            }
-            &:hover .list__item--link::after{
-                width: 100%;
-            }
-        }
-    }
-    .login-btn{
-        font-size: 2.5rem;
-        font-weight: 400;
+    gap: 10rem;
+    &__item {
+      list-style: none;
+      &--link {
         text-decoration: none;
-        color: $color-secondary;
-        transition: all .3s;
-
-        &:hover{
-            color: $color-primary;
+        color: $color-primary;
+        // background-color: aqua;
+        &::after {
+          content: "";
+          height: 0.3rem;
+          width: 0;
+          display: block;
+          background-color: $color-secondary;
+          margin-top: -0.5rem;
+          transition: all 0.3s ease-in;
         }
+        // border-bottom: .3rem solid $color-secondary;
+      }
+      &:hover .list__item--link::after {
+        width: 100%;
+      }
     }
+  }
+  .btn-container {
+    display: flex;
+    gap: 2rem;
+    .login-btn {
+      font-size: 2.5rem;
+      font-weight: 400;
+      text-decoration: none;
+      color: $color-secondary;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+    .signup-btn {
+      font-size: 2rem;
+      padding: 0.5rem 2rem;
+      border-radius: 10rem;
+      font-weight: 400;
+      text-decoration: none;
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+      color: $color-white;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $color-primary;
+        background-color: transparent;
+      }
+    }
+  }
 }

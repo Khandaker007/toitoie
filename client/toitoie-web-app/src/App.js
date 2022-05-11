@@ -10,6 +10,8 @@ import PlaceList from "./pages/place-list/place-list.component";
 import SignInAndSignUp from "./pages/sign-in-sign-up/sign-in-sign-up.component";
 import PackageSingle from "./pages/package-single/package-single.component";
 import PlaceSingle from "./pages/place-single/place-single.component";
+import About from "./pages/about/about.component";
+import SignUp from "./components/sign-up/sign-up.component";
 
 import pkgData from "./pages/package-list/data";
 import placesData from "./pages/place-list/data";
@@ -60,6 +62,8 @@ function App() {
           path="/place-single"
           element={<PlaceSingle placeId={placeId} />}
         />
+        <Route path="/about" element={<About />} />
+        <Route path="/sign-up" element={<SignUp />} />
       </Routes>
       <Footer />
     </>

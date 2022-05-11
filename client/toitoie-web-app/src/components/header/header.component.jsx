@@ -29,14 +29,19 @@ export default function Header() {
           </Link>
         </li>
         <li className="list__item">
-          <Link to="" className="list__item--link">
+          <Link to="/about" className="list__item--link">
             About Us
           </Link>
         </li>
       </ul>
-      <Link to="/sign-in-sign-up" className="login-btn">
-        Login
-      </Link>
+      <div className="btn-container">
+        <Link to="/sign-in-sign-up" className="login-btn">
+          Login
+        </Link>
+        <Link to="/sign-in-sign-up" className="signup-btn">
+          Sign Up
+        </Link>
+      </div>
     </div>
   );
 }
