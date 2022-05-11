@@ -44,6 +44,30 @@
       &__item {
       }
     }
+    .related-package {
+      margin-top: 5rem;
+      h2 {
+        color: $color-secondary;
+      }
+      .card-container1 {
+        padding: 5rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
+        grid-template-rows: repeat(2, max-content);
+        grid-gap: 3.5rem;
+  
+        .btn-container {
+          grid-column: col-start 1 / col-end 2;
+          display: flex;
+          justify-content: center;
+          margin-top: 5rem;
+
+          .link-btn{
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
   .booking-container {
     grid-column: col-sm-start / col-sm-end;

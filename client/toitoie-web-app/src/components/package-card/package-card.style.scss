@@ -8,6 +8,7 @@
         height: 20rem;
         border-radius: 1rem;
         overflow: hidden;
+        cursor: pointer;
 
         margin-bottom: 1rem;
 
@@ -21,6 +22,7 @@
         font-size: 2rem;
         color: $color-secondary;
         margin-bottom: 1rem;
+        cursor: pointer;
     }
     &__review-container{
         margin-bottom: 1rem;

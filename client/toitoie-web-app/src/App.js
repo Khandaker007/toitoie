@@ -19,8 +19,11 @@ import placesData from "./pages/place-list/data";
 import "./App.scss";
 
 function App() {
-  const [packageId, setPackageId] = useState("");
-  const [placeId, setPlaceId] = useState("");
+  const [packageId, setPackageId] = useState(1);
+  const [placeId, setPlaceId] = useState(1);
+
+  console.log(pkgData)
+  console.log(placesData)
 
   const collectPackageId = (id) => {
     setPackageId(id);
@@ -56,11 +59,11 @@ function App() {
         <Route path="/sign-in-sign-up" element={<SignInAndSignUp />} />
         <Route
           path="/package-single"
-          element={<PackageSingle packageId={packageId} />}
+          element={<PackageSingle packageId={packageId} data={pkgData}/>}
         />
         <Route
           path="/place-single"
-          element={<PlaceSingle placeId={placeId} />}
+          element={<PlaceSingle placeId={placeId} data={placesData}/>}
         />
         <Route path="/about" element={<About />} />
         <Route path="/sign-up" element={<SignUp />} />

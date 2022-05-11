@@ -85,7 +85,9 @@ export default function Home() {
           <PackageCard key={data.id} data={data} />
         ))}
         <div className="btn-container">
-          <Button text="View More" />
+          <Link to='/package-list' className="btn-link">
+            <Button text="View More" />
+          </Link>
         </div>
       </div>
     </div>

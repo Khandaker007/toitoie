@@ -22,9 +22,8 @@
         width: 70rem;
       }
       .btn-container {
-        padding: 5rem 20rem;
+        margin-top: 5rem;
         width: max-content;
-
         .btn-link {
           text-decoration: none;
         }
@@ -115,6 +114,10 @@
       display: flex;
       justify-content: center;
       margin-top: 5rem;
+
+      .btn-link{
+        text-decoration: none;
+      }
     }
   }
 }

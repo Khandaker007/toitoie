@@ -2,17 +2,17 @@ const packagesData = [
     {
         id: 1,
         title: 'Sajek',
-        image: require('../../assets/images/package-img-1.png')
+        image: require('../../assets/images/sajek.jpg')
     },
     {
         id: 2,
-        title: 'Dhaka',
-        image: require('../../assets/images/package-img-1.png')
+        title: 'Rajshahi',
+        image: require('../../assets/images/rajshahi.jpg')
     },
     {
         id: 3,
         title: 'chittagong',
-        image: require('../../assets/images/package-img-1.png')
+        image: require('../../assets/images/st.martin.jpg')
     },
     {
         id: 1,
@@ -22,7 +22,7 @@ const packagesData = [
     {
         id: 1,
         title: "Cox's Bazar",
-        image: require('../../assets/images/package-img-1.png')
+        image: require('../../assets/images/kuakata.jpg')
     },
 ]
 

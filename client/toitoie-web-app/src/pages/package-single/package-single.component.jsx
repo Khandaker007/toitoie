@@ -1,36 +1,32 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+// COMPONENT
+import Button from "../../components/button/button.component";
+import PackageCard from "../../components/package-card/package-card.component";
 
 // IMAGE
 import packageImage from "../../assets/images/package-image.png";
 
-import data from "../package-list/data";
+import packagesListData from "../package-list/data";
 
 import "./package-single.style.scss";
 
-export default function PackageSingle({ packageId }) {
+export default function PackageSingle({ packageId, data}) {
+  let data1 = data.filter((dataSingle) => dataSingle.id === packageId);
+  console.log(`package data${data1}`)
   return (
     <div className="package-single">
       <div className="package-info">
-        <h1>Tanguar TOITOIe – The most luxurious house boat at Tanguar haor</h1>
-        <p>{packageId}</p>
+        <h1>{data1[0].title}</h1>
         <div className="image-container">
-          <img src={packageImage} alt="package image" />
+          <img src={data1[0].image} alt="package image" />
         </div>
         <div className="overview-container">
           <h3>Overview</h3>
-          <p>
-            Tanguar haor is a unique wetland ecosystem of national importance as
-            it offers a combined view of submerged forest view, river view, and
-            hill views. The Government is committed to preserving its natural
-            resources and has taken several steps for the protection of this
-            wetland as it was once subjected to over-exploitation of its natural
-            resources. But now it has recovered its glory and offers a unique
-            lifetime experience. The boat journey, the rapid change of the
-            environment, the locals, the amazing and tranquil kingdom of water,
-            the amazing hillside view —- all makes a deadly combination so
-            charming, that you’ll be bound to return to that place whenever you
-            get the chance.
-          </p>
+          <p>{data1[0].overview1}</p>
+          <br/>
+          <p>{data1[0].overview2}</p>
         </div>
         <div className="highlights-container">
           <h3>Heighlight</h3>
@@ -73,6 +69,21 @@ export default function PackageSingle({ packageId }) {
               Premium Food with Exotic Local Dishes
             </li>
           </ul>
+        </div>
+        <div className="related-package">
+          <h2 className="heading-2">Popular Packages</h2>
+          <div className="card-container1">
+            {packagesListData
+              .filter((data) => data.id <= 4)
+              .map((data) => (
+                <PackageCard key={data.id} data={data} />
+              ))}
+            <div className="btn-container">
+              <Link to='/package-list' className="link-btn">
+                <Button text="Discover More" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
       <div className="booking-container">

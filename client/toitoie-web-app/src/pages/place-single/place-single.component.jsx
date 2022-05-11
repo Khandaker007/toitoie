@@ -13,15 +13,16 @@ import packagesListData from "./data";
 // CSS
 import "./place-single.style.scss";
 
-const PlaceSingle = ({ placeId }) => {
+const PlaceSingle = ({ placeId, data }) => {
+  const data1 = data.filter((dataSingle) => dataSingle.id === placeId);
+  console.log(data1)
   return (
     <div className="place-single">
       <div className="img-container">
-        <img src={placeImage1} alt="sylhet image" />
+        <img src={data1[0].image} alt="sylhet image" />
       </div>
       <div className="content">
-        <h1 className="heading-2 title">Sylhet</h1>
-        <p>{placeId}</p>
+        <h1 className="heading-2 title">{data1[0].title}</h1>
         <p>
           Tanguar haor is a unique wetland ecosystem of national importance as
           it offers a combined view of submerged forest view, river view, and
@@ -37,7 +38,7 @@ const PlaceSingle = ({ placeId }) => {
         </p>
       </div>
       <div className="related-package">
-        <h2 className="heading-2">Sylhet Packages</h2>
+        <h2 className="heading-2">{data1[0].title} Packages</h2>
         <div className="card-container">
           {packagesListData
             .filter((data) => data.id <= 4)
